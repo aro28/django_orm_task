@@ -14,9 +14,14 @@ art5_chyn=Article.objects.create(title="История компании Boston D
 pub_1_nusrultan=Publication.objects.create(author=nursultan,article=art1_nurs,date_published="2021-01-04")
 pub_2_nusrultan=Publication.objects.create(author=nursultan,article=art2_nurs,date_published="2021-01-04")
 pub_3_nusrultan=Publication.objects.create(author=nursultan,article=art3_nurs,date_published="2021-01-04")
-
 pub_4_veronika=Publication.objects.create(author=veronika,article=art4_ver,date_published="2023-03-12")
 pub_5_chynara=Publication.objects.create(author=chynara,article=art5_chyn,date_published="2021-01-04")
+#2 or another variant of creation publications
+# art1.authors.set([nursultan,veronika],through_defaults=dict(**kwargs)) одному артиклу несколько авторов
+
+#3 nursultan.articles.create(title='Новый ChatGPT-4: в чем его особенность', through_defaults=dict(**kwargs))
+
+ 
 
 Article.objects.all()   
 author=Author.objects.all()                     

@@ -19,8 +19,8 @@ class Author(AbstractUser):
 
 class Article(models.Model):
     title = models.CharField(max_length=100, verbose_name='Заголовок статьи')
-    authors = models.ManyToManyField(Author, related_name='authors',  through='Publication')
-
+    authors = models.ManyToManyField(Author, related_name='authors',  through='Publication') #publication -3яя таблица
+    #related_name - can be articles
     def __str__(self):
         return self.title
 
